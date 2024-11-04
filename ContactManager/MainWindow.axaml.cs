@@ -12,6 +12,11 @@ public partial class MainWindow : Window
 
     private void AddItem_Click(object? sender, RoutedEventArgs e)
     {
-        throw new System.NotImplementedException();
+        var newItem = new ListBoxItem { Content = $" Kontakt {ContactsListBox.Items.Count + 1}\n{NameTextBox.Text}, {SurnameTextBox.Text}, {NumberTextBox.Text}, {EmailTextBox.Text}" };
+        ContactsListBox.Items.Add(newItem);
+        NameTextBox.Text = "";
+        SurnameTextBox.Text = "";
+        NumberTextBox.Text = "";
+        EmailTextBox.Text = "";
     }
 }

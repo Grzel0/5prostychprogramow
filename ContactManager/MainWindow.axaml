@@ -5,38 +5,47 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="ContactManager.MainWindow"
         Title="ContactManager">
-    <StackPanel HorizontalAlignment="Left">
-        <TextBlock
-            Text="Contact Manager"
-            HorizontalAlignment="Center"
-            FontSize="20" />
-        <TextBox
-            x:Name="NameTextBox"
-            Watermark="Podaj Imię"
-            Margin="10, 5"
-            Width="200"></TextBox>
-        <TextBox
-            x:Name="SurnameTextBox"
-            Watermark="Podaj Nazwisko"
-            Margin="10, 5"
-            Width="200"></TextBox>
-        <TextBox
-            x:Name="NumberTextBox"
-            Watermark="Podaj numer telefonu"
-            Margin="10,5"
-            Width="200"
-            MaxLength="9"></TextBox>
-        <TextBox
-            x:Name="EmailTextBox"
-            Watermark="Podaj email"
-            Margin="10,5"
-            Width="200"></TextBox>
-        <Button
-            x:Name="AddButton"
-            Content="Dodaj nowy kontakt"
-            Margin="10,5"
-            HorizontalAlignment="Center"
-            Click="AddItem_Click"></Button>
+    <StackPanel>
+        <StackPanel HorizontalAlignment="Left" Width="250">
+            <TextBlock
+                Text="Contact Manager"
+                HorizontalAlignment="Center"
+                FontSize="20" />
+            <TextBox
+                x:Name="NameTextBox"
+                Watermark="Podaj Imię"
+                Margin="10, 5"
+                Width="200"></TextBox>
+            <TextBox
+                x:Name="SurnameTextBox"
+                Watermark="Podaj Nazwisko"
+                Margin="10, 5"
+                Width="200"></TextBox>
+            <TextBox
+                x:Name="NumberTextBox"
+                Watermark="Podaj numer telefonu"
+                Margin="10,5"
+                Width="200"
+                MaxLength="9"></TextBox>
+            <TextBox
+                x:Name="EmailTextBox"
+                Watermark="Podaj email"
+                Margin="10,5"
+                Width="200"></TextBox>
+            <Button
+                x:Name="AddButton"
+                Content="Dodaj nowy kontakt"
+                Margin="10,5"
+                HorizontalAlignment="Center"
+                Click="AddItem_Click"></Button>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top">
+            <ListBox x:Name="ContactsListBox" Width="450" Height="350" Margin="10">
+                <ListBox.Items>
+                    
+                </ListBox.Items>
+            </ListBox>
+        </StackPanel>
     </StackPanel>
     
 </Window>
