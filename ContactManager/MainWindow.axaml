@@ -32,17 +32,26 @@
                 Watermark="Podaj email"
                 Margin="10,5"
                 Width="200"></TextBox>
-            <Button
-                x:Name="AddButton"
-                Content="Dodaj nowy kontakt"
-                Margin="10,5"
-                HorizontalAlignment="Center"
-                Click="AddItem_Click"></Button>
+            <StackPanel Orientation="Horizontal" Margin="25,5">
+                <CheckBox
+                    x:Name="FavoriteCheckBox"></CheckBox>
+                <Button
+                    x:Name="AddButton"
+                    Content="Dodaj nowy kontakt"
+                    Margin="10,5"
+                    HorizontalAlignment="Center"
+                    Click="AddItem_Click"></Button>
+            </StackPanel>
+            
         </StackPanel>
         <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top">
             <ListBox x:Name="ContactsListBox" Width="450" Height="350" Margin="10">
                 <ListBox.Items>
-                    
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="1. Jan, Kowalski, 541216293, jankowalski@mail.com"></TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
                 </ListBox.Items>
             </ListBox>
         </StackPanel>

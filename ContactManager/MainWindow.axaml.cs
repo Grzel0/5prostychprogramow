@@ -12,7 +12,7 @@ public partial class MainWindow : Window
 
     private void AddItem_Click(object? sender, RoutedEventArgs e)
     {
-        var newItem = new ListBoxItem { Content = $" Kontakt {ContactsListBox.Items.Count + 1}\n{NameTextBox.Text}, {SurnameTextBox.Text}, {NumberTextBox.Text}, {EmailTextBox.Text}" };
+        var newItem = new ListBoxItem { Content = $"{ContactsListBox.Items.Count + 1}. {NameTextBox.Text}, {SurnameTextBox.Text}, {NumberTextBox.Text}, {EmailTextBox.Text}" };
         ContactsListBox.Items.Add(newItem);
         NameTextBox.Text = "";
         SurnameTextBox.Text = "";
